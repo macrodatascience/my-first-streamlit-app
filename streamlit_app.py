@@ -19,7 +19,7 @@ st.write("### 1. Introduction to Streamlit")
 st.write("Streamlit is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science. With Streamlit, you can turn your Python scripts into interactive web applications in just a few lines of code.")
 st.write("### 2. Setting up your environment")
 st.write("To get started with Streamlit, you'll need to install it. You can do this using pip:")
-st.code("pip install streamlit")
+st.code("pip install streamlit matplotlib pandas watchdog")
 st.write("### 3. Creating your first Streamlit app")
 st.write("Let's create a simple Streamlit app that displays a DataFrame. You can create a new Python file (e.g., `app.py`) and add the following code:")
 st.code("""
