@@ -74,6 +74,9 @@ st.write("Thank you for taking the time to go through this Streamlit crash cours
 st.write("### Output from the above code snippets")
 
 st.title("🎈 My First Streamlit App")
+
+st.markdown("Create and display a DataFrame:")
+
 data = {'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'],    
         'Age': [25, 30, 35, 40, 45, 50, 55, 60, 65, 70], 
         'City': ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose']
@@ -81,10 +84,15 @@ data = {'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'H
 df = pd.DataFrame(data)
 st.write("Here's a simple DataFrame:")
 st.dataframe(df)
+
+st.markdown("Add interactivity with a slider:")
+
 age_filter = st.slider("Select age range", 0, 100, (20, 40))
 filtered_df = df[(df['Age'] >= age_filter[0]) & (df['Age'] <= age_filter[1])]
 st.write("Filtered DataFrame:")
 
+st.markdown("Visualize filtered data with Matplotlib:")
+            
 ages = filtered_df['Age']
 names = filtered_df['Name']
 plt.bar(names, ages)
